@@ -2,8 +2,8 @@ const Pricing = ({ onContactClick }) => {
   const trialPackage = {
     name: "New Customer Trial",
     sessions: 4,
-    price: 250,
-    pricePerSession: 62.50,
+    price: 200,
+    pricePerSession: 50,
     originalPrice: 320,
     savings: null
   }
@@ -12,28 +12,28 @@ const Pricing = ({ onContactClick }) => {
     {
       name: "Starter",
       sessions: 12,
-      price: 950,
-      pricePerSession: 79.17,
+      price: 900,
+      pricePerSession: 75,
       savings: null,
-      monthlyPrice: 317,
+      monthlyPrice: 300,
       commitmentMonths: 3
     },
     {
       name: "Commitment", 
       sessions: 24,
-      price: 1800,
-      pricePerSession: 75,
-      savings: 300,
-      monthlyPrice: 300,
+      price: 1650,
+      pricePerSession: 68.75,
+      savings: 150,
+      monthlyPrice: 275,
       commitmentMonths: 6
     },
     {
       name: "Transformation",
       sessions: 36,
-      price: 2550,
-      pricePerSession: 70.83,
-      savings: 700,
-      monthlyPrice: 284,
+      price: 2340,
+      pricePerSession: 65,
+      savings: 360,
+      monthlyPrice: 260,
       commitmentMonths: 9
     }
   ]
@@ -148,10 +148,10 @@ const Pricing = ({ onContactClick }) => {
               {/* Pricing */}
               <div className="mb-6">
                 <div className="text-3xl font-bold text-white mb-1">
-                  ${plan.price}
+                  ${plan.monthlyPrice}/month
                 </div>
                 <div className="text-gray-400 text-sm mb-2">
-                  or ${plan.monthlyPrice}/month for {plan.commitmentMonths} months
+                  for {plan.commitmentMonths} months (${plan.price} total)
                 </div>
                 <div className="text-accent-400 font-semibold text-sm">
                   ${plan.pricePerSession.toFixed(0)} per session
